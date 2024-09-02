@@ -21,9 +21,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: './front-page'
 
       - name: Build project
         run: npm run build
+        working-directory: './front-page'
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
